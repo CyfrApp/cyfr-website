@@ -937,62 +937,49 @@ a {
 
 @media (max-width: 520px) {
 
-  /* Keep header compact */
-  .site-header {
-    height: 72px;
-  }
-
-  .nav {
-    min-height: 72px;
-    height: 72px;
-  }
-
-  .brand {
-    height: 52px;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-logo {
-    width: 85px;
-    height: 52px;
-    object-fit: contain;
-  }
-
-  /* Prevent anything from making the page wider than the phone */
-  html,
-  body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Feature sections */
-  .feature-row {
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  .feature-screen {
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
-    justify-content: center;
-  }
-
-  .feature-screen img {
-    width: 260px;
-    max-width: 80vw;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-  }
-
-  /* Hero screenshots */
   .hero-phones {
+    position: relative;
     width: 100%;
-    max-width: 100vw;
+    height: 430px;
+    margin-top: 10px;
     overflow: hidden;
+  }
+
+  .hero-phone {
+    position: absolute;
+    width: auto;
+    height: 360px;
+    max-width: none;
+    border-radius: 28px;
+  }
+
+  .hero-phone-main {
+    z-index: 3;
+    left: 50%;
+    top: 10px;
+    transform: translateX(-50%);
+  }
+
+  .hero-phone-left {
+    z-index: 1;
+    left: 50%;
+    top: 35px;
+    transform:
+      translateX(-82%)
+      rotate(-7deg)
+      scale(0.88);
+    opacity: 0.72;
+  }
+
+  .hero-phone-right {
+    z-index: 2;
+    left: 50%;
+    top: 35px;
+    transform:
+      translateX(-18%)
+      rotate(7deg)
+      scale(0.88);
+    opacity: 0.78;
   }
 
 }
